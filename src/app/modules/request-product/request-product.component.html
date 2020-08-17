@@ -1,1 +1,39 @@
-<p>request-product works!</p>
+<div class="container">
+  <section class="request-product">
+    <section class="request-product__container">
+      <div class="request-product__container-title">
+        <h2>Request</h2>
+        <div class="underline-title"></div>
+      </div>
+      <h3>New Product</h3>
+      <p>
+        Instant payments, and a lot of withdrawal methods available
+      </p>
+      <form class="request-product__container--form">
+        <div class="request-product__container--form-input">
+          <label for="select" class="label--required">Product</label>
+          <select name="select" id="select" class="select-css">
+            <option value="value1">Value 1</option>
+            <option value="value2" selected>Value 2</option>
+            <option value="value3">Value 3</option>
+          </select>
+        </div>
+        <div class="request-product__container--form-input">
+          <label for="user" class="label--required">Cellphone</label>
+          <input class="input" id="user" type="text" />
+          <span>Write the number you want to be contacted at</span>
+        </div>
+        <div class="request-product__container--form-input">
+          <label for="password" class="label--required">Monthly income</label>
+          <input class="input" id="password" type="password" />
+          <span>Give us an average income</span>
+        </div>
+        <div class="request-product__container-confirm">
+          <button class="request-product__container--button">Send</button>
+          <a (click)="closeRequestProduct()" class="request-product__container--close"> cancel</a>
+        </div>
+      </form>
+    </section>
+  </section>
+
+</div>

@@ -12,4 +12,7 @@ export class RequestProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeRequestProduct() {
+    console.log('Close request product')
+  }
 }
