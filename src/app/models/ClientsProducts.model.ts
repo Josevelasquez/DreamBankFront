@@ -1,4 +1,4 @@
-export interface product  {
+export interface ClientsProduct  {
   clpr_number: number,
   clpr_prodid: number,
   clpr_clientid: number,
