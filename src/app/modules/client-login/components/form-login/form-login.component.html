@@ -9,16 +9,16 @@
       For your money safety, please delete all extensions for the browser you
       use to log in to your wallet
     </p>
-    <form class="login__container--form">
+    <form [formGroup]= "loginForm" (ngSubmit)="onSubmit()" class="login__container--form">
       <div class="login__container--form-input">
         <label for="user" class="label--required">Login</label>
-        <input class="input" id="user" type="text" />
+        <input class="input" id="user" type="text" formControlName="username" />
       </div>
       <div class="login__container--form-input">
         <label for="password" class="label--required">Password</label>
-        <input class="input" id="password" type="password" />
+        <input class="input" id="password" type="password" formControlName="password"/>
       </div>
-      <button class="login__container--button">Login</button>
+      <button [disabled] = "loginForm.invalid" class="login__container--button">Login</button>
     </form>
     <div class="login__container--register">
       <div class="login__container--register-text">
