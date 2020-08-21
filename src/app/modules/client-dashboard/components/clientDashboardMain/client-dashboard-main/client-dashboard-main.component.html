@@ -1,36 +1,35 @@
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!-- Position Column -->
-  <ng-container matColumnDef="Date">
-    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.cltr_timesatamp | date:'dd/MM/yyyy'}} </mat-cell>
+  <ng-container matColumnDef="Type">
+    <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.prty_name}} </mat-cell>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="Description">
-    <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+  <ng-container matColumnDef="Account Name">
+    <mat-header-cell *matHeaderCellDef> Account Name </mat-header-cell>
     <!-- <mat-cell *matCellDef="let element"> {{element.clpr_number}}</mat-cell> -->
     <mat-cell *matCellDef="let element">
-       {{element.cltr_description}}
+      <a routerLink='/dashboard/detail/{{element.clpr_number}}'> {{element.clpr_number}} </a>
     </mat-cell>
   </ng-container>
 
   <!-- Weight Column -->
+  <ng-container matColumnDef="Status">
+    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.stat_name}} </mat-cell>
+  </ng-container>
+
   <ng-container matColumnDef="Currency">
     <mat-header-cell *matHeaderCellDef> Currency </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.curr_shortname}} </mat-cell>
   </ng-container>
 
-  <ng-container matColumnDef="Value">
-    <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.cltr_value}} </mat-cell>
-  </ng-container>
-
-  <!-- <ng-container matColumnDef="Balance">
+  <ng-container matColumnDef="Balance">
     <mat-header-cell *matHeaderCellDef> Balance </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-  </ng-container> -->
+    <mat-cell *matCellDef="let element"> {{element.cltr_balance}} </mat-cell>
+  </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
-

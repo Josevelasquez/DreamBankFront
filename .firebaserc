@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dreambankfront": {
+      "hosting": {
+        "dreamBank": [
+          "dreambankfront"
+        ]
+      }
+    }
+  }
+}

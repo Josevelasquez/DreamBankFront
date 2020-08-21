@@ -2,12 +2,22 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 const getUrl = window.location;
-const HOST_API = getUrl.protocol + '//' + getUrl.host;
-// const HOST_API = 'http://localhost:3000';
+// const HOST_API = getUrl.protocol + '//' + getUrl.host;
+const HOST_API = 'https://dreambanknode.herokuapp.com';
 
 export const environment = {
   production: true,
   HOST_API: HOST_API,
+  firebase: {
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+    appId: '',
+    measurementId: '',
+  },
   services: {
     login: {
       login: `${HOST_API}/api/auth/login`

@@ -1,35 +1,3 @@
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!-- Position Column -->
-  <ng-container matColumnDef="Type">
-    <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.clpr_prodid}} </mat-cell>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="Account Name">
-    <mat-header-cell *matHeaderCellDef> Account Name </mat-header-cell>
-    <!-- <mat-cell *matCellDef="let element"> {{element.clpr_number}}</mat-cell> -->
-    <mat-cell *matCellDef="let element">
-      <a routerLink='/dashboard/detail/{{element.clpr_number}}'> {{element.clpr_number}} </a>
-    </mat-cell>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="Status">
-    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.clpr_status}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="Currency">
-    <mat-header-cell *matHeaderCellDef> Currency </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.clpr_currency}} </mat-cell>
-  </ng-container>
-
-  <!-- <ng-container matColumnDef="Balance">
-    <mat-header-cell *matHeaderCellDef> Balance </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-  </ng-container> -->
-
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
+<app-header-dashboard></app-header-dashboard>
+<app-client-dashboard-main></app-client-dashboard-main>
+<app-stcky-menu></app-stcky-menu>

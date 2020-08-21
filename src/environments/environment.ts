@@ -3,10 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 const getUrl = window.location;
 // const HOST_API = getUrl.protocol + '//' + getUrl.host;
-const HOST_API = 'http://localhost:3000';
+const HOST_API = 'https://dreambanknode.herokuapp.com';
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+    appId: '',
+    measurementId: '',
+  },
   HOST_API: HOST_API,
   services: {
     login: {
